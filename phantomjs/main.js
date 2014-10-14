@@ -138,11 +138,6 @@ page.onInitialized = function() {
 page.onLoadFinished = function(status) {
   // The window has loaded.
   sendMessage('onLoadFinished', status);
-  if (status !== 'success') {
-    // File loading failure.
-    sendMessage('fail.load', url);
-    phantom.exit();
-  }
 };
 
 // Actually load url.
